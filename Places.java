@@ -1,6 +1,3 @@
-/*
-Lara Campos N13 INF2CM
-*/
 
 import androidx.annotation.NonNull;
 
@@ -14,7 +11,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 
-@Entity(tableName = "places")//criação da entidade
+@Entity(tableName = "places")
 
 public class Places{
 
@@ -24,44 +21,41 @@ public class Places{
 
 	@ColumnInfo(name = "placesId")
 
-	private int mId; //identificador único
+	private int mId; 
 
 	@Nullable
 
 	@ColumnInfo(name = "placestCreationDate")
 
-	private String mCreationDate;//data de controle para o BD
+	private String mCreationDate;
 
 	@Nullable
 
-	@ColumnInfo(name = "placesTitle")
+	@ColumnInfo(name = "placesName")
 
-	private String mTitle; //nome do lugar
-
+	private String mName;
 	@Nullable
 
-	@ColumnInfo(name = "placesCity")
+	@ColumnInfo(name = "LocationCity")
 
-	private String mCity; //nome da cidade
+	private String mLocationCity; 
 
 	@Nullable
 
 	@ColumnInfo(name = "placesScore")
 
-	private int mScore; //nota do lugar de 0 à 10
+	private int mScore;
 
-	public Places(@Nullable String creationdate, String title, int score, String city) {
+	public Places(@Nullable String creationdate, String title, int score, String locationCity) {
 
     mCreationDate = creationdate;
 
-    mTitle = title;
+    mName = name;
 
-    mCity = city;
+    mLocationCity = Locationcity;
 
     mScore = score;
 	}
-
-	//Gerando getters and setters
 
 	public int getId() {
 		return mId;
@@ -79,20 +73,20 @@ public class Places{
 		mCreationDate = CreationDate;
 	}
 
-	public String getTitle() {
+	public String getName() {
 		return mTitle;
 	}
 
-	public void setTitle(String mTitle) {
-		mTitle = Title;
+	public void setName(String mName) {
+		mName = Name;
 	}
 
-	public String getCity() {
+	public String getLocationCity() {
 		return mCity;
 	}
 
-	public void setSinger(String mCity) {
-		mCity = City;
+	public void setLocationCity(String mLocationCity) {
+		mLocationCity = LocationCity;
 	}
 
 	public int getScore() {
